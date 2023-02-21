@@ -38,6 +38,7 @@ public class PluginsDrawerSource implements DrawerSource {
                 .getExtensions()
                 .stream()
                 .filter(filters.get(type))
+                .filter(Extension::isEnabled)
                 .map(Extension::getGraphDrawers)
                 .collect(Collectors.toList());
         List<Plugin.Drawer> result = new ArrayList<>();

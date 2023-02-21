@@ -78,8 +78,8 @@ public class PluginsProxyImpl implements Plugin.Proxy {
                 options.forEach((name, id) -> directed.deregisterOption(id));
             }
             Map<String, Integer> options2 = obtainedUndirected.remove(plugin);
-            if (options != null) {
-                options.forEach((name, id) -> undirected.deregisterOption(id));
+            if (options2 != null) {
+                options2.forEach((name, id) -> undirected.deregisterOption(id));
             }
         }
 
