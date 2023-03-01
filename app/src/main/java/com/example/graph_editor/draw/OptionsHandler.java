@@ -33,13 +33,11 @@ import graph_editor.extensions.StackCapture;
 import graph_editor.graph.Graph;
 import graph_editor.graph.VersionStack;
 import graph_editor.graph_generators.GraphGenerator;
-import graph_editor.graph_generators.GraphGeneratorBipartiteClique;
 import graph_editor.properties.PropertyGraphBuilder;
 import graph_editor.properties.PropertySupportingGraph;
 import graph_editor.visual.BuilderVisualizer;
 import graph_editor.visual.GraphVisualization;
 import graph_editor.visual.PlanarGraphVisualizer;
-import graph_editor.visual.PlanarGraphVisualizer.*;
 
 public class OptionsHandler {
     @SuppressLint("NonConstantResourceId")
@@ -98,7 +96,7 @@ public class OptionsHandler {
                 stack.push(visualization);
                 graphView.postInvalidate();
                 return true;
-            case R.id.options_btn_arrange: // TODO: change strings to enums
+            case R.id.options_btn_arrange:
                 visualization = new PlanarGraphVisualizer().generateVisual(stack.getCurrent().getGraph() , stack.getCurrent(), fixArrangingWithForces);
                 stack.push(visualization);
                 graphView.postInvalidate();

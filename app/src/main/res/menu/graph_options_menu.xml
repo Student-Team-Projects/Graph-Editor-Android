@@ -61,16 +61,16 @@
         app:showAsAction="never" >
     </item>
     <item android:id="@+id/options_btn_arrange"
-        android:title="Aesthetic layout"
+        android:title="@string/forces_fixing_layout"
         app:showAsAction="never">
     </item>
     <item android:id="@+id/options_btn_planar_arrange"
-        android:title="Aesthetic layout 2"
+        android:title="@string/planar_fixing_layout"
         app:showAsAction="never">
     </item>
 
     <item android:id="@+id/options_btn_makePlanar"
-        android:title="Planar layout"
+        android:title="@string/planar_layout"
         app:showAsAction="never">
     </item>
 

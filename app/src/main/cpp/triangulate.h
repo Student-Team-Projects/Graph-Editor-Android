@@ -43,15 +43,19 @@ public:
     void compute_faces(std::vector<Face>& all_faces);
     std::vector<Vertex *> find_path(Vertex *vertex, Face *face);
     Face add_path();
+
+    bool contain(Vertex *key);
 };
 
-void compute_fragments(std::vector<Vertex> &V, std::vector<Face> faces, std::vector<Fragment> &f);
+void compute_fragments(std::vector<Vertex*> &V, std::vector<Face> faces, std::vector<Fragment> &f);
 std::vector<Vertex*> find_cycle(Vertex* cur, Vertex* target);
-std::vector<Face> compute_faces(std::vector<Vertex>& V);
-std::vector<Face> triangulate_biconnected_component(std::vector<Face>& faces);
+bool compute_faces(std::vector<Vertex*>& V, std::vector<Face>& faces);
+void triangulate_biconnected_component(std::vector<Face>& faces, std::vector<Face>& triangulated_faces);
 void make_graph_biconnected(int i, int& d, bool* visited, int* depth,
-                            int* low, std::vector<Vertex> &adj, int* parent,
+                            int* low, std::vector<Vertex*> &adj, int* parent,
                             std::vector<std::pair<int, int>>& edges_to_add);
-std::vector<Face> triangulate(std::vector<Vertex>& V);
-std::vector<Vertex> make_graph(int n, std::vector<std::pair<int, int>> edges_input);
+bool triangulate(std::vector<Vertex*>& V, std::vector<Face>& res);
+std::vector<Vertex*> make_graph(int n, std::vector<std::pair<int, int>> edges_input);
+void make_graph_connected(bool* visited, std::vector<Vertex*> &V, std::vector<std::pair<int, int>>& toAdd);
+void mark_visited(int i, std::vector<Vertex*> &V, bool* visited);
 #endif //GRAFY_TRIANGULATE_H

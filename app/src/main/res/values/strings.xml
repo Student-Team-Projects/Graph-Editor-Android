@@ -82,4 +82,7 @@
     <string name="rotate_canvas">rotate canvas</string>
     <string name="zoom_canvas">zoom canvas</string>
     <string name="property_readers">Property Readers</string>
+    <string name="planar_layout">Planar layout</string>
+    <string name="planar_fixing_layout">Planar-fixing layout</string>
+    <string name="forces_fixing_layout">Forces-fixing layout</string>
 </resources>
